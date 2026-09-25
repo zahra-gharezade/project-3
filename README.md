@@ -1,8 +1,8 @@
 # 👗 Luxury Fashion & Studio Website
 
-A modern, elegant, and editorial fashion studio website built with HTML5 & modern CSS3.
+A modern and elegant fashion studio website built with semantic HTML5 & modern CSS3.
 
-🚀 **Live Demo:** https://zahra-gharezade.github.io/first-project/
+🚀 **Live Demo:** [https://zahra-gharezade.github.io/project-3/](https://zahra-gharezade.github.io/project-3/)
 
 ---
 
