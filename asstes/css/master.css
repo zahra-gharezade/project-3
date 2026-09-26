@@ -18,6 +18,7 @@ h6{
     background-image: url(..//imgase/home_slider_2-2.jpg);
     background-size: cover;
     background-position: center;
+    
 
     >.row{
         &:nth-of-type(1){
@@ -128,6 +129,7 @@ h6{
                 >i{
                      font-size: 28px;
                     color: white;
+                    
                 }
              
             }
@@ -158,6 +160,7 @@ h6{
        /* border: 1px solid gold; */
        margin-top: 150px;
        >h1{
+        
         display: flex;
         justify-content: center;
         align-items: center;
@@ -175,6 +178,7 @@ h6{
         justify-content: center;
         margin: 0 auto;
         background-color: #4caab4a1;
+        
        
        }
        >.buttons{  
@@ -408,6 +412,13 @@ h6{
         font-size: 32px;
         color: white;
         text-align: center;
+        margin-bottom: 0;
+    }
+    >.form-separator{
+          display: block;
+          width: 60px;
+          height: auto;
+            margin: 20px auto 0;
     }
     div{
         width: 100%;
