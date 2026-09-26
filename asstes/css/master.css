@@ -193,6 +193,10 @@ h6{
         height: 70px;
         font-size: 26px;
          color: white;
+         &:hover{
+            background-color: rgba(245, 222, 179, 0.678);
+            color: var(--favbac);
+         }
         }
        }
        }
@@ -321,13 +325,16 @@ h6{
             height: 40px;
             display: flex;
             justify-content: center;
-            margin-top: 20px;
+            margin-bottom: 100px;
             align-items: center;
             margin-left: auto;
             margin-right: auto;
             >a{
                 color: white;
                 font-size: 14px;
+                &:hover{
+                 color: var(--favcolor);
+                }
             }
         }
        }
@@ -377,6 +384,12 @@ h6{
             border: 2px solid white;
             justify-content: center;
             align-items: center;
+            transition: 0.4s;
+            &:hover{
+                background-color: antiquewhite;
+                color: var(--favbac);
+                border: 2px solid rgba(0, 0, 0, 0.726);
+            }
            }
         }
 
@@ -401,9 +414,11 @@ h6{
         margin-top: 100px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, 300px);
+        grid-template-rows: repeat(4, 1fr);
         gap: 7px;
         >figure{
+            position: relative;
+            overflow: hidden;
             width: 100%;
            height: 100%;
             /* border: 2px solid gray; */
@@ -413,12 +428,40 @@ h6{
             font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
             color: white;
             font-size: 40px;
+            &:hover{
+    >figcaption{
+        bottom: 0;
+        /* width: 100%;
+        height: 100%; */
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.575);
+    }
+}
             >img{
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
 
             }
+            >figcaption{
+        position: absolute;
+    bottom: -70px;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    z-index: 5;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.575);
+    transition: 0.4s;
+        
+            }
+            
            &:nth-of-type(1){
                grid-row: 1 / span 2;
             }
@@ -462,10 +505,12 @@ h6{
     
 }
 .footer{
+     /* background-color: red !important; */
       /* margin-top: 100px; */
     width: 100%;
     min-height: 80vh;
     padding: 80px 20px 40px;
+    background-color: var(--favbac); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -480,15 +525,15 @@ h6{
         >h2{
             width: 100%;
             text-align: center;
-            font-size: 50px;
+            font-size: 45px;
             color: white;
             margin: 0;
           
         }
         >.text{
-            font-size: 22px;
-            color: #eee;
-            margin-top: -15px;
+            font-size: 20px;
+            color: #ccc;
+            margin-top: -10px;
         }
         >figure{
             width: 100%;
@@ -497,73 +542,77 @@ h6{
             align-items: center;
             margin: 15px 0;
               >img{
-        width: 700px;
-          height: 700px;
+        width: 500px;
+          height: 500px;
           display: block;
           border-radius: 5%;
         object-fit: cover;        
         }
         }
-        >.button{
-            margin-top: 5px;
-            width: 200px;
-            height: 50px;
-            background-color: var(--favcolor);
-            >a{
-                width: 100%;
-                height: 100%;
-                display: inline-block;
-                text-align: center;
-                padding: 12px 30px;
-                border: 2px solid white;
-                font-size: 18px;
-                text-decoration: none;
-                color: white;
-                transition: 0.4s;
-                background-color: transparent;
-                &:hover{
-                    background-color: rgba(222, 184, 135, 0.541);
-                    color: rgb(17, 1, 1);
-                }
-            }
+        
+            
              >.footer-actions{
+                flex-direction: column;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                gap: 40px;
-                flex-wrap: wrap;
-                margin-top: 10px;
+                gap: 25px;
+                margin-top: 15px;
                 >.button{
                     width: 200px;
                     height: 50px;
-                    background-color: var(--favcolor);
+                    /* background-color: var(--favcolor); */
                     >a{
-                        width: 100%
-                        height: 100%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        border: 2px solid white;
-                        font-size: 18px;
-                        text-decoration: none;
-                        color: white;
-                        text-transform: capitalize;
-                        background-color: var(--favcolor);
+                         width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    border: 2px solid var(--favcolor);
+                    font-size: 16px;
+                    text-decoration: none;
+                    color: var(--favcolor);
+                    text-transform: uppercase;
+
+                    background-color: transparent;
+                    border-radius: 4px;
+                    transition: 0.4s;
                         &:hover{
-                            background-color: bisque;
-                            color: rgb(22, 2, 2);
+                            background-color:var(--favcolor);
+                            color: white;
                         }
 
                     }
                 }
+                >.icon{
+                    display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                >i{
+                    color: var(--favcolor);
+                    font-size: 28px;
+                    transition: 0.4s;
+                    &:hover{
+                        color: white;
+                    }
+                }
+                }
              }
+             >h5{
+                color: #aaa;
+                font-size: 16px;
+                
+             }
+        }
         }
         
        
       
 
-    }
+    
 
-}
+
 
 
